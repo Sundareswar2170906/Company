@@ -1,0 +1,11 @@
+com\stockmarket\fse\exceptions\GlobalExceptionHandler.class
+com\stockmarket\fse\FseApplication.class
+com\stockmarket\fse\configuration\WebSecurityConfig.class
+com\stockmarket\fse\repository\ICompanyRepository.class
+com\stockmarket\fse\model\ExceptionModel.class
+com\stockmarket\fse\model\Company.class
+com\stockmarket\fse\service\IService.class
+com\stockmarket\fse\configuration\ProducerConfiguration.class
+com\stockmarket\fse\controller\CompanyController.class
+com\stockmarket\fse\service\Service.class
+com\stockmarket\fse\exceptions\IllegalTurnoverException.class
