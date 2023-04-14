@@ -51,4 +51,9 @@ public class CompanyController {
 		service.deleteCompany(companyCode);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
+	
+	@GetMapping("/ping")
+	public ResponseEntity<Company> getPing() {
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 }
