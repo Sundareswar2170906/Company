@@ -53,7 +53,7 @@ public class CompanyController {
 	}
 	
 	@GetMapping("/ping")
-	public ResponseEntity<Company> getPing() {
-		return new ResponseEntity<>(HttpStatus.OK);
+	public String getPing() {
+		return "Company ping version : 2.0";
 	}
 }
