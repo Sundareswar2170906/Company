@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: company
+  name: company-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: company
+  template:
+    metadata:
+      labels:
+        app: company
+    spec:
+      containers:
+      - image: sunddas/company:latest
+        name: company
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: company
+  name: company-service
+spec:
+  ports:
+  - name: 8081-8081
+    port: 8081
+    protocol: TCP
+    nodePort: 30800
+  selector:
+    app: demo
+  type: NodePort
