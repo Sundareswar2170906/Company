@@ -4,14 +4,9 @@ env:
     username: "arn:aws:secretsmanager:ap-south-1:853447314930:secret:prod/docker/login-T5vmpG:docker_id::"
     password: "arn:aws:secretsmanager:ap-south-1:853447314930:secret:prod/docker/login-T5vmpG:docker_password::"
 phases:
-  # install:
-  #   commands:
-  #     - apt-get update -y
-  #     - apt-get install -y software-properties-common
-  #     - add-apt-repository ppa:openjdk-r/ppa
-  #     - apt-get update -y
-  #     - apt-get install -y openjdk-8-jdk
-  #     - apt-get install -y maven
+  install:
+    runtime-versions:
+      java: corretto11
   pre_build:
     commands:
       - echo "logging in to docker"
@@ -19,6 +14,7 @@ phases:
       - echo "logged in"
   build:
     commands:
+      - mvn install
       - echo "building image"
       - docker build . -t sunddas/checking3
   post_build:
