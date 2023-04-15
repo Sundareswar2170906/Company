@@ -20,8 +20,8 @@ phases:
   build:
     commands:
       - echo "building image"
-      - docker build . -t sunddas/checking2
+      - docker build . -t sunddas/checking3
   post_build:
     commands:
       - echo "pushing image"
-      - docker push sunddas/checking2
+      - docker push sunddas/checking3
