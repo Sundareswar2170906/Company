@@ -16,8 +16,9 @@ phases:
     commands:
       - mvn install
       - echo "building image"
-      - docker build . -t sunddas/checking3
+      - docker build -t new .
   post_build:
     commands:
       - echo "pushing image"
-      - docker push sunddas/checking3
+      - docker tag new:latest public.ecr.aws/p7d3y1u6/new:latest
+      - docker push public.ecr.aws/p7d3y1u6/new:latest
