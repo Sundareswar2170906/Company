@@ -23,3 +23,5 @@ phases:
       - echo "pushing image"
       - docker tag new:latest public.ecr.aws/p7d3y1u6/new:latest
       - docker push public.ecr.aws/p7d3y1u6/new:latest
+artifacts:
+  files: imagedefinitions.json
