@@ -1,0 +1,27 @@
+version: 0.2
+env:
+  secrets-manager:  
+    username: "arn:aws:secretsmanager:ap-south-1:853447314930:secret:prod/docker/login-T5vmpG:docker_id::"
+    password: "arn:aws:secretsmanager:ap-south-1:853447314930:secret:prod/docker/login-T5vmpG:docker_password::"
+phases:
+  # install:
+  #   commands:
+  #     - apt-get update -y
+  #     - apt-get install -y software-properties-common
+  #     - add-apt-repository ppa:openjdk-r/ppa
+  #     - apt-get update -y
+  #     - apt-get install -y openjdk-8-jdk
+  #     - apt-get install -y maven
+  pre_build:
+    commands:
+      - echo "logging in to docker"
+      - docker login --username $username --password $password
+      - echo "logged in"
+  build:
+    commands:
+      - echo "building image"
+      - docker build . -t sunddas/checking2
+  post_build:
+    commands:
+      - echo "pushing image"
+      - docker push sunddas/checking2
