@@ -25,4 +25,6 @@ phases:
       - docker push public.ecr.aws/p7d3y1u6/new:latest
       - printf '[{"name":"check3","imageUri":"public.ecr.aws/p7d3y1u6"}]' > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
+  files: 
+    - imagedefinitions.json
+    - appspec.yml
