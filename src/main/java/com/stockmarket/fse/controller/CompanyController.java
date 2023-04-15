@@ -54,6 +54,6 @@ public class CompanyController {
 	
 	@GetMapping("/ping")
 	public String getPing() {
-		return "Company ping version : 2.0";
+		return "Company ping version : 2.0.1";
 	}
 }
