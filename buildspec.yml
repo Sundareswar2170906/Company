@@ -21,3 +21,6 @@ phases:
     commands:
       - echo "pushing image"
       - docker push sunddas/checking3
+artifacts:
+  files:
+    - target/fse-0.0.1-SNAPSHOT.jar    
