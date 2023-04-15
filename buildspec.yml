@@ -23,7 +23,6 @@ phases:
       - echo "pushing image"
       - docker tag new:latest public.ecr.aws/p7d3y1u6/new:latest
       - docker push public.ecr.aws/p7d3y1u6/new:latest
-      - commands:
       - printf '[{"name":"check3","imageUri":"public.ecr.aws/p7d3y1u6"}]' > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
