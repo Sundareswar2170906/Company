@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.stockmarket.fse.controller.CompanyControllerTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.163 s - in com.stockmarket.fse.controller.CompanyControllerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.057 s - in com.stockmarket.fse.controller.CompanyControllerTest
