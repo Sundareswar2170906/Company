@@ -3,6 +3,8 @@ package com.stockmarket.fse.service;
 import java.math.BigInteger;
 import java.util.List;
 
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 
@@ -14,6 +16,8 @@ import com.stockmarket.fse.repository.ICompanyRepository;
 public class Service implements IService {
 	
 	private String kafkaTopic= "company-logs";
+	
+    org.slf4j.Logger logger = LoggerFactory.getLogger(Service.class);
 
 	@Autowired
 	private KafkaTemplate<String, String> template;
@@ -22,6 +26,7 @@ public class Service implements IService {
 	private ICompanyRepository repo;
 
 	public Company addCompany(Company company) throws IllegalTurnoverException {
+		logger.info("Adding a company" + company);
 		//template.send(kafkaTopic, "Add New Company - Company Code : " + company.getCode());
 		BigInteger minimumTurnover = new BigInteger("100000000");
 		int compare = company.getTurnover().compareTo(minimumTurnover);
