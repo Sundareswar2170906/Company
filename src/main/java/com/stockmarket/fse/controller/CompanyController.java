@@ -3,8 +3,11 @@ package com.stockmarket.fse.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,15 +15,32 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.amazonaws.services.sns.AmazonSNSClient;
+import com.amazonaws.services.sns.model.PublishRequest;
+import com.amazonaws.services.sns.model.SubscribeRequest;
 import com.stockmarket.fse.exceptions.IllegalTurnoverException;
 import com.stockmarket.fse.model.Company;
 import com.stockmarket.fse.service.Service;
 
 @RestController
 public class CompanyController {
+	
+	@Value("${cloud.aws.end-point.uri}")
+	private String sqsUrl;
+	
+	@Value("${cloud.aws.end-point.sns}")
+	private String snsUrl;
+	
+	@Autowired
+	private QueueMessagingTemplate queueMessagingTemplate;
 
+//	@Autowired
+//	private AmazonSNSClient amazonSNSClient;
+	
 	@Autowired
 	private Service service;
+	
+	//String TOPIC_ARN = "arn:aws:sns:ap-south-1:853447314930:newtopic";
 
 	@PostMapping("/api/v1.0/market/company/register")
 	public ResponseEntity<Company> addCompany(@RequestBody Company company) {
@@ -31,6 +51,11 @@ public class CompanyController {
 		} catch (IllegalTurnoverException ex) {
 			System.out.println("Exception in Turnover");
 		}
+		queueMessagingTemplate.send(sqsUrl,MessageBuilder.withPayload("Company Created \n \n Details: \n \n"+company).build());
+		//SubscribeRequest request = new SubscribeRequest(TOPIC_ARN,"email","sundareswar2170906@gmail.com");
+		//amazonSNSClient.subscribe(request);
+		//PublishRequest publishRequest = new PublishRequest(snsUrl,"New Company Added \n \n Attached details: \n \n"+company, "Company Added");
+		//amazonSNSClient.publish(publishRequest);
 		return new ResponseEntity<Company>(c, HttpStatus.OK);
 	}
 

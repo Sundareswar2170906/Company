@@ -1,0 +1,200 @@
+2023-04-17 15:42:31.815  INFO 25780 --- [restartedMain] com.stockmarket.fse.FseApplication       : Starting FseApplication using Java 14.0.2 on LAPTOP-FGCK8SP9 with PID 25780 (C:\Users\sunda\Downloads\fse\fse\target\classes started by sunda in C:\Users\sunda\Downloads\fse\fse)
+2023-04-17 15:42:31.853  INFO 25780 --- [restartedMain] com.stockmarket.fse.FseApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-17 15:42:32.724  WARN 25780 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.stockmarket.fse.FseApplication]; nested exception is java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration]
+2023-04-17 15:42:32.934 ERROR 25780 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.stockmarket.fse.FseApplication]; nested exception is java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
+	at com.stockmarket.fse.FseApplication.main(FseApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
+Caused by: java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:334) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:446) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:369) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:284) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:193) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:106) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:81) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.AnnotationConfigUtils.attributesFor(AnnotationConfigUtils.java:285) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:103) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:82) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:280) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175) ~[spring-context-5.3.21.jar:5.3.21]
+	... 18 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:427) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:427) ~[na:na]
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:284) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:324) ~[spring-core-5.3.21.jar:5.3.21]
+	... 33 common frames omitted
+
+2023-04-17 15:42:38.179  INFO 14988 --- [restartedMain] com.stockmarket.fse.FseApplication       : Starting FseApplication using Java 14.0.2 on LAPTOP-FGCK8SP9 with PID 14988 (C:\Users\sunda\Downloads\fse\fse\target\classes started by sunda in C:\Users\sunda\Downloads\fse\fse)
+2023-04-17 15:42:38.181  INFO 14988 --- [restartedMain] com.stockmarket.fse.FseApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-17 15:42:39.844  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-04-17 15:42:39.845  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-04-17 15:42:39.876  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 MongoDB repository interfaces.
+2023-04-17 15:42:39.880  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-04-17 15:42:39.880  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-04-17 15:42:39.886  INFO 14988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.stockmarket.fse.repository.ICompanyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-04-17 15:42:39.886  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2023-04-17 15:42:40.225  INFO 14988 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e54af3b7-9830-39c2-a798-6c4c966f5ff8
+2023-04-17 15:42:40.285  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#178f2364' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:42:40.286  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#4d2b6d90' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:42:40.292  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#7e10fb12' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:42:40.293  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:42:40.293  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:42:40.531  INFO 14988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-17 15:42:40.533  INFO 14988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-17 15:42:40.533  INFO 14988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-17 15:42:40.611  INFO 14988 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-17 15:42:40.611  INFO 14988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2392 ms
+2023-04-17 15:42:40.917  INFO 14988 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/14.0.2+12-46"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7b45cbfa], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@b24c982]}, clusterSettings={hosts=[127.0.0.1:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@4ac3951d], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-04-17 15:42:40.920  INFO 14988 --- [cluster-rtt-ClusterId{value='643d1b9891d4ed5c57196806', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:40, serverValue:274}] to 127.0.0.1:27017
+2023-04-17 15:42:40.920  INFO 14988 --- [cluster-ClusterId{value='643d1b9891d4ed5c57196806', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:41, serverValue:273}] to 127.0.0.1:27017
+2023-04-17 15:42:40.923  INFO 14988 --- [cluster-ClusterId{value='643d1b9891d4ed5c57196806', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2946100}
+2023-04-17 15:42:40.928  WARN 14988 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-04-17 15:42:40.954  WARN 14988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-17 15:42:40.983  WARN 14988 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-04-17 15:42:41.174  INFO 14988 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5853e7c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65c1a39b, org.springframework.security.web.context.SecurityContextPersistenceFilter@73f951c5, org.springframework.security.web.header.HeaderWriterFilter@21234e30, org.springframework.security.web.authentication.logout.LogoutFilter@6b543ee8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7362835, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c0076c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2769e9bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52b91083, org.springframework.security.web.session.SessionManagementFilter@264a6997, org.springframework.security.web.access.ExceptionTranslationFilter@bac9757, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ccd7050]
+2023-04-17 15:42:42.718  INFO 14988 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-04-17 15:42:42.772  WARN 14988 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-17 15:42:42.778  INFO 14988 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-17 15:42:42.814  INFO 14988 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-04-17 15:42:46.887  INFO 14988 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COMPANY with eureka with status UP
+2023-04-17 15:42:46.897  INFO 14988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-17 15:42:46.898  INFO 14988 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2023-04-17 15:42:47.074  INFO 14988 --- [restartedMain] com.stockmarket.fse.FseApplication       : Started FseApplication in 9.412 seconds (JVM running for 96361.93)
+2023-04-17 15:42:47.082  INFO 14988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-17 15:42:51.310  INFO 14988 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 15:42:51.311  INFO 14988 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-17 15:42:51.317  INFO 14988 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-04-17 15:42:51.342  INFO 14988 --- [http-nio-8081-exec-1] com.stockmarket.fse.service.Service      : Adding a company
+2023-04-17 15:42:51.373  INFO 14988 --- [http-nio-8081-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:42, serverValue:275}] to 127.0.0.1:27017
+2023-04-17 15:46:38.962  INFO 14988 --- [Thread-111] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application COMPANY with eureka with status DOWN
+2023-04-17 15:46:40.886  INFO 25780 --- [restartedMain] com.stockmarket.fse.FseApplication       : Starting FseApplication using Java 14.0.2 on LAPTOP-FGCK8SP9 with PID 25780 (C:\Users\sunda\Downloads\fse\fse\target\classes started by sunda in C:\Users\sunda\Downloads\fse\fse)
+2023-04-17 15:46:40.892  INFO 25780 --- [restartedMain] com.stockmarket.fse.FseApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-17 15:46:41.108  WARN 25780 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.stockmarket.fse.FseApplication]; nested exception is java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration]
+2023-04-17 15:46:41.208 ERROR 25780 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.stockmarket.fse.FseApplication]; nested exception is java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
+	at com.stockmarket.fse.FseApplication.main(FseApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
+Caused by: java.lang.IllegalArgumentException: Could not find class [org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:334) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:446) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:369) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:284) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:193) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:106) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:81) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.AnnotationConfigUtils.attributesFor(AnnotationConfigUtils.java:285) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:103) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:82) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:280) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207) ~[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175) ~[spring-context-5.3.21.jar:5.3.21]
+	... 18 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:427) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:427) ~[na:na]
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:284) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:324) ~[spring-core-5.3.21.jar:5.3.21]
+	... 33 common frames omitted
+
+2023-04-17 15:46:48.318  INFO 14988 --- [restartedMain] com.stockmarket.fse.FseApplication       : Starting FseApplication using Java 14.0.2 on LAPTOP-FGCK8SP9 with PID 14988 (C:\Users\sunda\Downloads\fse\fse\target\classes started by sunda in C:\Users\sunda\Downloads\fse\fse)
+2023-04-17 15:46:48.318  INFO 14988 --- [restartedMain] com.stockmarket.fse.FseApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-17 15:46:49.958  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-04-17 15:46:49.959  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-04-17 15:46:50.020  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 MongoDB repository interfaces.
+2023-04-17 15:46:50.024  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-04-17 15:46:50.026  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-04-17 15:46:50.033  INFO 14988 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.stockmarket.fse.repository.ICompanyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-04-17 15:46:50.033  INFO 14988 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-04-17 15:46:50.211  INFO 14988 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e54af3b7-9830-39c2-a798-6c4c966f5ff8
+2023-04-17 15:46:50.232  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#178d9649' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:46:50.234  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#d35bc86' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:46:50.240  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#54151320' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:46:50.241  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:46:50.241  INFO 14988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-17 15:46:50.398  INFO 14988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-04-17 15:46:50.400  INFO 14988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-17 15:46:50.401  INFO 14988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-17 15:46:50.479  INFO 14988 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-04-17 15:46:50.479  INFO 14988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2130 ms
+2023-04-17 15:46:50.803  INFO 14988 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/14.0.2+12-46"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@5b29a7e6], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@b24c982]}, clusterSettings={hosts=[127.0.0.1:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@3e69472b], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-04-17 15:46:50.808  INFO 14988 --- [cluster-rtt-ClusterId{value='643d1c9291d4ed5c57196807', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:44, serverValue:277}] to 127.0.0.1:27017
+2023-04-17 15:46:50.808  INFO 14988 --- [cluster-ClusterId{value='643d1c9291d4ed5c57196807', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:43, serverValue:276}] to 127.0.0.1:27017
+2023-04-17 15:46:50.811  INFO 14988 --- [cluster-ClusterId{value='643d1c9291d4ed5c57196807', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5367500}
+2023-04-17 15:46:50.818  WARN 14988 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-04-17 15:46:50.841  WARN 14988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-17 15:46:50.875  WARN 14988 --- [restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2023-04-17 15:46:51.037  INFO 14988 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43eceae6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49c0d47, org.springframework.security.web.context.SecurityContextPersistenceFilter@2528d505, org.springframework.security.web.header.HeaderWriterFilter@7c6df5b6, org.springframework.security.web.authentication.logout.LogoutFilter@4b5fb6b2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15bdaac6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5df253d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ea1cd9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6158c1de, org.springframework.security.web.session.SessionManagementFilter@64704164, org.springframework.security.web.access.ExceptionTranslationFilter@79603841, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@138ed5e7]
+2023-04-17 15:46:52.654  INFO 14988 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-04-17 15:46:52.701  WARN 14988 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-17 15:46:52.709  INFO 14988 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-17 15:46:52.750  INFO 14988 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-04-17 15:46:56.844  INFO 14988 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COMPANY with eureka with status UP
+2023-04-17 15:46:56.854  INFO 14988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-04-17 15:46:56.855  INFO 14988 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2023-04-17 15:46:57.036  INFO 14988 --- [restartedMain] com.stockmarket.fse.FseApplication       : Started FseApplication in 9.094 seconds (JVM running for 96611.891)
+2023-04-17 15:46:57.042  INFO 14988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-17 15:47:23.875  INFO 14988 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-17 15:47:23.875  INFO 14988 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-17 15:47:23.883  INFO 14988 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-04-17 15:47:23.913  INFO 14988 --- [http-nio-8081-exec-1] com.stockmarket.fse.service.Service      : Adding a company
+2023-04-17 15:47:23.948  INFO 14988 --- [http-nio-8081-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:45, serverValue:278}] to 127.0.0.1:27017
+2023-04-17 15:49:34.694  INFO 14988 --- [Thread-118] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application COMPANY with eureka with status DOWN
